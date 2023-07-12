@@ -32,8 +32,8 @@
   <p>
     <strong>Images:</strong>
     <% post.images.each do |image| %>
-      <div><%= image_tag image %> </div>
+      <div><%= cl_image_tag image.key, height: 100, width: 100, crop: :fill %> </div>
     <% end %>
   </p>
-  
+
 </div>
