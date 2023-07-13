@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# font awesome gem for icons
+gem "font-awesome-sass", "~> 6.4.0"
+
 # cloudinary gem for handling images upload
 gem "cloudinary"
 
