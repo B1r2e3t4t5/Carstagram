@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# active storage validator for backend validations
+gem 'activestorage-validator'
+
 # font awesome gem for icons
 gem "font-awesome-sass", "~> 6.4.0"
 
