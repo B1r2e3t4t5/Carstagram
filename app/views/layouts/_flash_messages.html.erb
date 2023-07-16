@@ -3,7 +3,7 @@
     <p class="alert alert-success"> <%= n %> </p>
   <% end %>
 <% elsif notice && notice.is_a?(String) %>
-  <p class="alert alert-success"> <%= n %> </p>
+  <p class="alert alert-success"> <%= notice %> </p>
 <% end %>
 
 <% if alert && alert.is_a?(Array) %>
@@ -11,5 +11,5 @@
     <p class="alert alert-danger"> <%= a %> </p>
   <% end %>
 <% elsif alert && alert.is_a?(String) %>
-  <p class="alert alert-danger"> <%= a %> </p>
+  <p class="alert alert-danger"> <%= alert %> </p>
 <% end %>
