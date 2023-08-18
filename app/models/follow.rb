@@ -1,5 +1,4 @@
 class Follow < ApplicationRecord
-  class Follow < ApplicationRecord
     before_create :check_privacy
     belongs_to :follower, class_name: "User", foreign_key: "follower_id"
     belongs_to :followed, class_name: "User", foreign_key: "followed_id"
@@ -12,6 +11,4 @@ class Follow < ApplicationRecord
     def check_privacy
       self.accepted = true unless self.followed.private
     end
-
-  end
 end
