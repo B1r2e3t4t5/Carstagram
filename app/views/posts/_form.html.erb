@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body d-flex">
 
-          <div class="border-end border-secondary mx-2" style="width:60%">
+          <div class="border-end border-secondary mx-2" style="width: 40rem">
               <%= form.file_field :images, multiple: true, id: "post-images", required: true %>
           </div>
 
@@ -28,9 +28,9 @@
 
             <div class="my-2">
               <% if current_user.profile_pic.attached? %>
-                <%= image_tag current_user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+                <%= cl_image_tag current_user.profile_pic.key, class: "rounded-circle", style: "width: 2.5rem; height: 2.5rem; border: 2px solid #ccc" %>
               <% else %>
-                <%= image_tag 'user-pp.png', class: "img-thumbnail rounded-circle", style: "width: 10%" %>
+                <%= cl_image_tag 'user-pp_hvltst', class: "img-thumbnail rounded-circle", style: "width: 2.5rem; height 2.5rem" %>
               <% end %>
               <span class="fw-bold mx-2"><%= current_user.username %></span>
             </div>

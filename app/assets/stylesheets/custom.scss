@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  // background-color: #fafafa;
   height: 100%;
 }
 
@@ -107,4 +107,11 @@ body {
 .a-decoration-none {
   text-decoration: none;
   color: black
-} 
+}
+
+.carousel-indicators [data-bs-target]{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
