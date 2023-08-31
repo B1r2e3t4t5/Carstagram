@@ -19,4 +19,8 @@ Rails.application.routes.draw do
 
   post 'accept_follow', to: 'follows#accept_follow', as: :accept_follow
   delete 'decline_follow', to: 'follows#decline_follow', as: :decline_follow
+
+  resources :chats, only: [:show] do
+    resources :messages, only: [:create], param: :chat_id
+  end
 end
