@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-
+import { createConsumer } from "@rails/actioncable"
 // Connects to data-controller="chat-subscription"
 export default class extends Controller {
   static values = { chatId: Number, currentUserId: Number }
@@ -22,11 +22,10 @@ export default class extends Controller {
     event.target.reset()
   }
 
-
-  #insertMessage(data){
+  #insertMessage(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id;
-    const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
-    this.messagesTarget.insertAdjacentHTML("beforeend",messageElement);
+    const messageElement = this.#buildMessageElement(currentUserIsSender, data.message);
+    this.messagesTarget.insertAdjacentHTML("beforeend", messageElement);
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight);
   }
 
