@@ -2,7 +2,9 @@
 
 <% random_usernames.each do |username| %>
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <%= cl_image_tag 'user-pp_oovlk7', class: "img-thumbnail rounded-circle border border-2 border-primary", style: "width: 3.5rem; height:3.5rem" %>
+    <div class="parent-element">
+      <%= cl_image_tag 'user-pp_oovlk7', class: "img-thumbnail-custom rounded-circle border-2", style: "width: 3.5rem; height:3.5rem" %>
+    </div>
     <small style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 3.5rem">
       <%= username %>
     </small>

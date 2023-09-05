@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ $danger: orange;
 @import "bootstrap";
 @import "custom";
 @import "font-awesome";
 @import "filepond";
-@import "filepond-plugin-image-preview"; 
+@import "filepond-plugin-image-preview";
