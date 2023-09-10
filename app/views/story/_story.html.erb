@@ -1,12 +1,11 @@
-<% random_usernames = ["ferrarilover", "tyre_guy", "mrspeed", "trackstar23", "mercedesmonster", "motormadman", "racingrandal"] %>
-
-<% random_usernames.each do |username| %>
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <div class="parent-element">
-      <%= cl_image_tag 'user-pp_oovlk7', class: "img-thumbnail-custom rounded-circle border-2", style: "width: 3.5rem; height:3.5rem" %>
-    </div>
-    <small style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 3.5rem">
-      <%= username %>
-    </small>
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <% if current_user.followings.size > 0 %>
+    <% @following = current_user.followings.sample %>
+    <% else %>
+     <% @following = User.all.sample %>
+     <% end %>
+  <div id="story-border">
+  <%= cl_image_tag @following.profile_pic.attached? ? @following.profile_pic.key : 'user-pp_oovlk7', class: "img-thumbnail-custom rounded-circle border-2", style: "width: 3.5rem; height:3.5rem; " %>
   </div>
-<% end %>
+  <small style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 3.5rem"> <%=  @following.username %> </small>
+</div>
