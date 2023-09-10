@@ -118,10 +118,10 @@ body {
 .parent-element {
   padding: 3px; border-radius: 50%; display: inline-block;
     background: yellow;
-    background: -webkit-linear-gradient(yellow, orange(255, 0, 0));
-    background: -o-linear-gradient(yellow, orange(255, 0, 0));
-    background: -moz-linear-gradient(yellow, orange(255, 0, 0));
-    background: linear-gradient(yellow, orange(255, 0, 0));
+    background: -webkit-linear-gradient(rgb(255, 170, 0), rgb(255, 68, 0));
+    background: -o-linear-gradient(rgb(255, 170, 0), rgb(255, 68, 0));
+    background: -moz-linear-gradient(rgb(255, 170, 0), rgb(255, 68, 0));
+    background: linear-gradient(rgb(255, 170, 0), rgb(255, 68, 0));
   }
 
   .img-thumbnail-custom {
